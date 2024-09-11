@@ -1,0 +1,46 @@
+#para hacer el análisis desde la nube de 10x hay que descargarse txg desde su web
+#muevo los ficheros del drive a C: para que reconozca el directorio de descarga
+#descargo txg sin instalarlo (no es necesario)
+C:\control_female_raw>curl -f -o txg-windows-v2.0.0.zip "https://cf.10xgenomics.com/cloud-cli/v2.0.0/txg-windows-v2.0.0.zip"
+
+#una vez descargado-> entrar en la carpeta para ejecutarlo
+C:\control_female_raw>cd C:\control_female_raw\txg-windows-v2.0.0
+
+#subir los documentos desde txg
+C:\control_female_raw\txg-windows-v2.0.0>txg.exe files upload --project-id iSEx5qh5SaSoQ7phRHK3og C:\control_female_raw\data
+
+#al usar por primera vez la nube solicita el token de acceso disponible en el tutorial de la nube
+Enter access token: 875df445a6ba60ac363059abe62302f7050cb9ff3503981cbc8b79eaefe20ad6
+
+#una vez concedido el acceso--> comienza carga
+Access token file creation successful!  Your access token was saved in the
+following file: C:\Users\LAB-PC\AppData\Roaming\txg\credentials
+
+Do not directly modify this file.  To update your access token, run
+'txg auth reset' to delete it and 'txg auth setup' to recreate it.
+
+You are about to upload 2 file(s) to the following project:
+  
+  Project ID: 892131e6-a879-49a4-a843-ba614472b7a2
+Project name: "ocm_mn_female"
+Number of files: 2
+
+C:\control_female_raw\data\US1_A1_S1_L001_R1_001.fastq.gz (13.07 GB)
+C:\control_female_raw\data\US1_A1_S1_L001_R2_001.fastq.gz (33.43 GB)
+
+Total: 46.51 GB.
+
+You will receive an email when the upload is complete.
+To stop the upload, press Ctrl+C.
+
+#resultados
+C:\control_female_raw\data\US1_A1_S1_L001_R1_001.fastq.gz (13.07 GB) Done
+C:\control_female_raw\data\US1_A1_S1_L001_R2_001.fastq.gz (33.43 GB) Done
+
+Your upload has successfully completed! You can view and analyze your data in
+the project "ocm_mn_female".
+
+#usar la interfaz interactiva de la nube para correr el análisis
+#descargarse los outputs desde la línea de comandos directamente en la carpeta
+
+cd C:\control_female_raw> curl -o archivo.tipo https://cloud.10xgenomics.com/cloud-analysis/projects/892131e6-a879-49a4-a843-ba614472b7a2/analyses
