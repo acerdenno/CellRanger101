@@ -1,20 +1,20 @@
 #para hacer el análisis desde la nube de 10x hay que descargarse txg desde su web
 #muevo los ficheros del drive a C: para que reconozca el directorio de descarga
 #descargo txg sin instalarlo (no es necesario)
-C:\control_female_raw>curl -f -o txg-windows-v2.0.0.zip "https://cf.10xgenomics.com/cloud-cli/v2.0.0/txg-windows-v2.0.0.zip"
+C:\original\directory>curl -f -o txg-windows-v2.0.0.zip "https://cf.10xgenomics.com/cloud-cli/v2.0.0/txg-windows-v2.0.0.zip"
 
 #una vez descargado-> entrar en la carpeta para ejecutarlo
-C:\control_female_raw>cd C:\control_female_raw\txg-windows-v2.0.0
+C:\original\directory>cd C:\control_female_raw\txg-windows-v2.0.0
 
 #subir los documentos desde txg
-C:\control_female_raw\txg-windows-v2.0.0>txg.exe files upload --project-id iSEx5qh5SaSoQ7phRHK3og C:\control_female_raw\data
+C:\original\directory\txg-windows-v2.0.0>txg.exe files upload --project-id iSEx5qh5SaSoQ7phRHK3og C:\control_female_raw\data
 
 #al usar por primera vez la nube solicita el token de acceso disponible en el tutorial de la nube
 Enter access token: 875df445a6ba60ac363059abe62302f7050cb9ff3503981cbc8b79eaefe20ad6
 
 #una vez concedido el acceso--> comienza carga
 Access token file creation successful!  Your access token was saved in the
-following file: C:\Users\LAB-PC\AppData\Roaming\txg\credentials
+following file: C:\****\****\AppData\Roaming\txg\credentials
 
 Do not directly modify this file.  To update your access token, run
 'txg auth reset' to delete it and 'txg auth setup' to recreate it.
